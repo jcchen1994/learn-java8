@@ -138,8 +138,6 @@ public class FilterProjects {
 
         Thread t = new Thread(task);
         t.start();
-        System.out.print(1);
-
     }
 
 }
