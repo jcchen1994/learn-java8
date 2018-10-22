@@ -93,13 +93,11 @@ public class FilterProjects {
         }
         return result;
     }
-
     public static void main(String[] args) {
         List<Project> data = new ArrayList<>();
 
         data.add(Project.builder().name("Blade").language("java").author("biezhi")
                 .stars(3500).description("Lightning fast and elegant mvc framework for Java8").build());
-
         data.add(Project.builder().name("Tale").language("java").author("biezhi")
                 .stars(2600).description("Best beautiful java blog, worth a try").build());
 
@@ -132,7 +130,6 @@ public class FilterProjects {
 
 
         List<Project> filter = filter(data, project -> project.getStars() > 1000);
-
         data.sort(Comparator.comparing(Project::getStars));
 
         System.out.println(data);
@@ -141,6 +138,7 @@ public class FilterProjects {
 
         Thread t = new Thread(task);
         t.start();
+        System.out.print(1);
 
     }
 
